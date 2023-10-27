@@ -12,10 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: website
-          path: ./index.html
+      - name: Create Tarball
+        run: tar -cvf deploy.tar index.html
 
       - name: Deploy App to CapRover
         uses: caprover/deploy-from-github@v1.0.1
