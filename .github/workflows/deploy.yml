@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to CapRover
-        uses: caprover/action-deploy@v1
+        uses: caprover/deploy-from-github@v1.0.1
         with:
           server-name: ${{ secrets.CAPROVER_SERVER_NAME }}
           app-name: ${{ secrets.CAPROVER_APP_NAME }}
