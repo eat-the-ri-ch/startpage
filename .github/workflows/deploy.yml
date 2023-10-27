@@ -11,11 +11,11 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@v1.0.1
         with:
-          server-name: ${{ secrets.CAPROVER_SERVER_NAME }}
-          app-name: ${{ secrets.CAPROVER_APP_NAME }}
-          password: ${{ secrets.CAPROVER_PASSWORD }}
+          server: ${{ secrets.CAPROVER_SERVER_NAME }}
+          app: ${{ secrets.CAPROVER_APP_NAME }}
+          token: ${{ secrets.CAPROVER_PASSWORD }}
