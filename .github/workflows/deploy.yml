@@ -20,4 +20,4 @@ jobs:
         with:
           server: ${{ secrets.CAPROVER_SERVER_NAME }}
           app: ${{ secrets.CAPROVER_APP_NAME }}
-          token: ${{ secrets.CAPROVER_PASSWORD }}
+          token: ${{ secrets.APP_TOKEN }}
